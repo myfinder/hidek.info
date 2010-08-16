@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html lang="ja_JP">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>we &#9829; hidek</title>
+<style type="text/css">
+span.rat { 
+    position: absolute; 
+    width: 16px; 
+    height: 16px;
+}
+span.marquee { 
+    position: relative;
+    width: 100px; 
+}
+</style>
+<link rel="stylesheet" type="text/css" href="http://www.stokeshot.com/javascript/plugins/jquery.web-old-days/style.css" />
+<link rel="stylesheet" href="static/jquery.simplyscroll-1.0.4.css" type="text/css">
+<link rel="stylesheet" href="static/jquery.lightbox-0.5.css" type="text/css">
+<script type="text/javascript" src="static/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://www.stokeshot.com/javascript/plugins/jquery.web-old-days/web-old-days.js"></script>
+<script type="text/javascript" src="static/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript" src="static/jquery.simplyscroll-1.0.4.min.js"></script>
+<script type="text/javascript">
+    (function($) {
+        $(function() {
+            $("#scroller_hidek").simplyScroll({
+                autoMode: 'loop',
+                speed: 5
+            });
+            $("#scroller_hidek img").each(function(n, e) {
+                $(e).wrap('<a href="' + e.src + '"/>');
+            });
+            $("#scroller_hidek a").lightBox();
+
+            $.cursorrat({
+                path: 'http://campaign.sixapart.jp/aprilfool/images/',
+                images: ['toph.png', 'tophtoph.png', 'sixapart.png', 'typepad.png', 'movabletype.png', 'vox.png']
+            });
+            $('.marquee').marquee();
+            $('.blink').blink();
+        });
+    })(jQuery);
+</script>
+<script type="text/javascript">
+<!--
+window.onload = function() {
+    var year = 2010;
+    var mon  = 09;
+    var day  = 02;
+    var time = 0;
+    var xday = new Date(year, mon - 1, day, time, 00, 00); //基準になる年月日
+
+    showday();
+
+    function showday() {
+        var nowday = new Date();
+        var passtime = xday.getTime() - nowday.getTime(); //今から基準になる日までの経過時間　1/1000秒単位
+
+        var cnt_day      = Math.floor(passtime / (1000 * 60 * 60 * 24));    // カウントダウン表示 (日にち) の取得
+        passtime        -= (cnt_day * (1000 * 60 * 60 * 24));               // 経過秒から(日にち)を引く
+        var cnt_hour     = Math.floor(passtime / (1000 * 60 * 60));         // カウントダウン表示 (時) の取得
+        passtime        -= (cnt_hour * (1000 * 60 * 60));                   // 経過秒から(時)を引く
+        var cnt_min      = Math.floor(passtime / ( 1000 * 60));             // カウントダウン表示 (分) 取得
+        passtime        -= (cnt_min * (1000 * 60));                         // 経過秒から(分)を引く
+        var cnt_sec      = Math.floor(passtime / 1000);                     // カウントダウン表示 (秒) 取得
+        passtime        -= (cnt_sec * 1000);                                // 経過秒から(秒)を引く
+        var cnt_millisec = Math.floor(passtime / 10);                       // カウントダウン表示 (100/1秒) 取得
+
+        // 分、秒、ミリ秒を２桁で表示する。
+        if (cnt_min < 10) {cnt_min = '0' + cnt_min;}
+        if (cnt_sec < 10) {cnt_sec = '0' + cnt_sec;}
+        if (cnt_millisec < 10) {cnt_millisec = '0' + cnt_millisec;}
+
+        if ((xday - nowday) > 0) {
+            document.tbox.dspday.value = "ダブル成人式まであと "+cnt_day+"日と "+cnt_hour+"時間"+cnt_min+"分"+cnt_sec+"秒"+cnt_millisec+" です！"
+        }
+        else {
+            document.tbox.dspday.value = "ダブル成人式おめでとう！これからも末永くよろしくお願いいたします！！"
+        }
+        timerID = setTimeout(showday, 10);
+    }
+};
+// -->
+</script>
+
+</head>
+<body>
+<h1>we love hidek!</h1>
+<form name="tbox" style="background-color : #ffffa6;width : 45px;">
+    <input name="dspday" type="text" style="font-size : 20pt; color : navy; background-color : #ffccff; text-align : center;border-width : 0px ;border-style : solid;font-weight :bold ;" size="70">
+</form>
+<br>
+<div style="font-size: 10pt; color: black">これから、各種APIを取り揃える予定です。</div>
+<div style="font-size: 10pt; color: black">このページを彩ってくださるデザインも募集中！</div>
+<br>
+<div style="font-size: 10pt; color: black" class="blink">あと、パートナー(になってくれる人)募集中！</div>
+
+<div id="hidek_image">
+    <ul id="scroller_hidek">
+        <li><img src="img/001.jpg" height="200"></li> 
+        <li><img src="img/002.jpg" height="200"></li> 
+        <li><img src="img/003.jpg" height="200"></li> 
+        <li><img src="img/004.jpg" height="200"></li> 
+        <li><img src="img/005.jpg" height="200"></li> 
+        <li><img src="img/006.jpg" height="200"></li> 
+        <li><img src="img/007.jpg" height="200"></li> 
+        <li><img src="img/008.jpg" height="200"></li> 
+        <li><img src="img/009.jpg" height="200"></li> 
+        <li><img src="img/010.jpg" height="200"></li> 
+        <li><img src="img/011.jpg" height="200"></li> 
+        <li><img src="img/012.jpg" height="200"></li> 
+        <li><img src="img/013.jpg" height="200"></li> 
+        <li><img src="img/016.jpg" height="200"></li> 
+    </ul>
+</div>
+</body>
+</html>
